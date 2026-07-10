@@ -7,12 +7,21 @@ const state = {
   editFileSha: null,
 };
 
-function slugifyNow() {
-  const now = new Date();
+function localDateParts(date = new Date()) {
   const pad = (n) => String(n).padStart(2, "0");
-  return `post-${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(
-    now.getHours()
-  )}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+  return {
+    y: date.getFullYear(),
+    m: pad(date.getMonth() + 1),
+    d: pad(date.getDate()),
+    hh: pad(date.getHours()),
+    mm: pad(date.getMinutes()),
+    ss: pad(date.getSeconds()),
+  };
+}
+
+function slugifyNow() {
+  const { y, m, d, hh, mm, ss } = localDateParts();
+  return `post-${y}${m}${d}-${hh}${mm}${ss}`;
 }
 
 function buildMarkdown({ title, date, tag, excerpt, body }) {
@@ -29,7 +38,8 @@ function makeExcerpt(body) {
 }
 
 function todayDate() {
-  return new Date().toISOString().slice(0, 10);
+  const { y, m, d } = localDateParts();
+  return `${y}-${m}-${d}`;
 }
 
 function refreshTokenStatus() {
