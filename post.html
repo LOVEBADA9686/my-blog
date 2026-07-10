@@ -34,6 +34,25 @@
     </article>
   </main>
 
+  <div id="password-modal" class="modal-overlay" hidden>
+    <div class="modal-box">
+      <h2 class="modal-title">비밀번호 확인</h2>
+      <form id="password-modal-form">
+        <input
+          id="password-modal-input"
+          class="text-input"
+          type="password"
+          autocomplete="current-password"
+          placeholder="비밀번호를 입력하세요"
+        />
+        <div class="modal-actions">
+          <button type="button" id="password-modal-cancel" class="btn btn-secondary">취소</button>
+          <button type="submit" id="password-modal-confirm" class="btn btn-primary">확인</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">© 2026 my-blog</div>
   </footer>

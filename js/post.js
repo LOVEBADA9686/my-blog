@@ -15,12 +15,43 @@ function renderError(message) {
 
 let currentEntry = null;
 
+/** Shows the password modal (masked input) and resolves with the entered
+ *  string, or null if the user cancels. */
+function askPasswordViaModal() {
+  const overlay = document.getElementById("password-modal");
+  const form = document.getElementById("password-modal-form");
+  const input = document.getElementById("password-modal-input");
+  const cancelBtn = document.getElementById("password-modal-cancel");
+
+  return new Promise((resolve) => {
+    function cleanup(result) {
+      overlay.hidden = true;
+      form.removeEventListener("submit", onSubmit);
+      cancelBtn.removeEventListener("click", onCancel);
+      resolve(result);
+    }
+    function onSubmit(e) {
+      e.preventDefault();
+      cleanup(input.value);
+    }
+    function onCancel() {
+      cleanup(null);
+    }
+
+    input.value = "";
+    overlay.hidden = false;
+    form.addEventListener("submit", onSubmit);
+    cancelBtn.addEventListener("click", onCancel);
+    input.focus();
+  });
+}
+
 async function verifyPassword(entry) {
   if (!entry.passwordHash) {
     alert("이 글은 비밀번호가 설정되어 있지 않아 브라우저에서 수정·삭제할 수 없습니다.");
     return false;
   }
-  const input = prompt("비밀번호를 입력하세요:");
+  const input = await askPasswordViaModal();
   if (input === null) return false;
   const hash = await sha256Hex(input);
   if (hash !== entry.passwordHash) {
