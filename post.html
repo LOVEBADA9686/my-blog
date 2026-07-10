@@ -26,6 +26,11 @@
         <div id="post-tags" class="post-tags"></div>
       </header>
       <div id="post-content" class="post-content"></div>
+      <div class="post-actions">
+        <button id="edit-btn" type="button" class="btn btn-secondary">✏️ 수정</button>
+        <button id="delete-btn" type="button" class="btn btn-danger">🗑 삭제</button>
+      </div>
+      <p id="action-status" class="form-status"></p>
     </article>
   </main>
 
@@ -36,6 +41,7 @@
   <script src="vendor/marked.min.js"></script>
   <script src="vendor/highlight.min.js"></script>
   <script src="js/theme.js"></script>
+  <script src="js/github-api.js"></script>
   <script src="js/render.js"></script>
   <script src="js/post.js"></script>
 </body>

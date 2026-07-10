@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>글 작성 - my-blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="index.html">my<span class="dot">-</span>blog</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="테마 전환">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="index.html">← 목록으로</a>
+
+    <h1 id="form-title" class="page-title">새 글 작성</h1>
+
+    <section id="token-section" class="token-box">
+      <p id="token-status" class="token-status"></p>
+      <div class="token-row">
+        <input
+          id="token-input"
+          type="password"
+          class="text-input"
+          placeholder="GitHub 토큰(ghp_...)을 붙여넣으세요"
+          autocomplete="off"
+        />
+        <button id="token-save-btn" type="button" class="btn btn-secondary">토큰 저장</button>
+      </div>
+      <p class="help-text">
+        이 브라우저에만 저장되며, 사이트에 글을 게시할 때만 GitHub API로 전송됩니다.
+        토큰이 없다면 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">여기서 발급</a>하세요
+        (Repository access는 <code>my-blog</code>만, Permissions는 <code>Contents: Read and write</code>로 설정).
+      </p>
+    </section>
+
+    <form id="post-form" class="post-form">
+      <label class="field-label" for="title-input">제목</label>
+      <input id="title-input" class="text-input" type="text" required placeholder="글 제목을 입력하세요" />
+
+      <label class="field-label" for="tag-select">카테고리</label>
+      <select id="tag-select" class="text-input">
+        <option value="소개">소개</option>
+        <option value="AI이슈">AI이슈</option>
+        <option value="국내/해외증시">국내/해외증시</option>
+        <option value="블로그홈페이지개발">블로그홈페이지개발</option>
+      </select>
+
+      <label class="field-label" for="body-input">본문 (마크다운)</label>
+      <textarea
+        id="body-input"
+        class="text-input textarea-input"
+        required
+        rows="14"
+        placeholder="여기에 글 내용을 작성하세요. ## 제목, **굵게** 같은 마크다운 문법을 쓸 수 있어요."
+      ></textarea>
+
+      <div id="password-fields">
+        <label class="field-label" for="password-input">비밀번호 (수정·삭제할 때 필요해요)</label>
+        <input id="password-input" class="text-input" type="password" placeholder="4자 이상" autocomplete="new-password" />
+        <label class="field-label" for="password-confirm-input">비밀번호 확인</label>
+        <input id="password-confirm-input" class="text-input" type="password" placeholder="다시 한번 입력" autocomplete="new-password" />
+        <p class="help-text">⚠️ 이 비밀번호는 공개 저장소에 (해시 형태로) 저장돼요. 중요한 계정 비밀번호와 다른 걸 쓰세요.</p>
+      </div>
+
+      <button id="submit-btn" type="submit" class="btn btn-primary">저장하고 게시하기</button>
+      <p id="form-status" class="form-status"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 my-blog</div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/write.js"></script>
+</body>
+</html>

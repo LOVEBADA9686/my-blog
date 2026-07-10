@@ -13,6 +13,69 @@ function renderError(message) {
   document.getElementById("post-content").innerHTML = `<p>${message}</p>`;
 }
 
+let currentEntry = null;
+
+async function verifyPassword(entry) {
+  if (!entry.passwordHash) {
+    alert("이 글은 비밀번호가 설정되어 있지 않아 브라우저에서 수정·삭제할 수 없습니다.");
+    return false;
+  }
+  const input = prompt("비밀번호를 입력하세요:");
+  if (input === null) return false;
+  const hash = await sha256Hex(input);
+  if (hash !== entry.passwordHash) {
+    alert("비밀번호가 틀렸습니다.");
+    return false;
+  }
+  return true;
+}
+
+async function handleEditClick() {
+  if (!currentEntry) return;
+  const ok = await verifyPassword(currentEntry);
+  if (!ok) return;
+  location.href = `write.html?slug=${encodeURIComponent(currentEntry.slug)}`;
+}
+
+async function handleDeleteClick() {
+  if (!currentEntry) return;
+  const ok = await verifyPassword(currentEntry);
+  if (!ok) return;
+  if (!confirm("정말 이 글을 삭제할까요? 되돌릴 수 없습니다.")) return;
+
+  const statusEl = document.getElementById("action-status");
+
+  if (!hasGhToken()) {
+    statusEl.textContent =
+      "삭제하려면 GitHub 토큰이 필요합니다. '새 글 작성' 페이지에서 먼저 토큰을 저장해주세요.";
+    return;
+  }
+
+  statusEl.textContent = "삭제하는 중...";
+  try {
+    const postFile = await ghGetFile(`posts/${currentEntry.file}`);
+    if (postFile) {
+      await ghDeleteFile(`posts/${currentEntry.file}`, postFile.sha, `Delete post: ${currentEntry.title}`);
+    }
+
+    const manifestFile = await ghGetFile("posts/manifest.json");
+    const posts = JSON.parse(manifestFile.content).filter((p) => p.slug !== currentEntry.slug);
+    await ghPutFile(
+      "posts/manifest.json",
+      JSON.stringify(posts, null, 2) + "\n",
+      `Delete post: ${currentEntry.title}`,
+      manifestFile.sha
+    );
+
+    statusEl.textContent = "삭제 완료! 목록으로 이동합니다 (사이트에 반영되기까지 최대 1분 정도 걸릴 수 있어요)...";
+    setTimeout(() => {
+      location.href = "index.html";
+    }, 1500);
+  } catch (err) {
+    statusEl.textContent = `삭제 실패: ${err.message}`;
+  }
+}
+
 async function init() {
   const slug = getSlugFromUrl();
   if (!slug) {
@@ -28,6 +91,8 @@ async function init() {
     renderError("해당 글을 찾을 수 없습니다.");
     return;
   }
+
+  currentEntry = entry;
 
   try {
     const { meta, html } = await loadPost(entry.file);
@@ -46,6 +111,9 @@ async function init() {
     const contentEl = document.getElementById("post-content");
     contentEl.innerHTML = html;
     highlightCodeBlocks(contentEl);
+
+    document.getElementById("edit-btn").addEventListener("click", handleEditClick);
+    document.getElementById("delete-btn").addEventListener("click", handleDeleteClick);
   } catch (err) {
     renderError(err.message);
   }
