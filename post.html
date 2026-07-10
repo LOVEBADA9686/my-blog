@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my-blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" id="hljs-theme-light" href="vendor/hljs-light.min.css" />
+  <link rel="stylesheet" id="hljs-theme-dark" href="vendor/hljs-dark.min.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="index.html">my<span class="dot">-</span>blog</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="테마 전환">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="index.html">← 목록으로</a>
+
+    <article>
+      <header class="post-header">
+        <h1 id="post-title" class="post-card-title">불러오는 중...</h1>
+        <div id="post-meta" class="post-meta"></div>
+        <div id="post-tags" class="post-tags"></div>
+      </header>
+      <div id="post-content" class="post-content"></div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 my-blog</div>
+  </footer>
+
+  <script src="vendor/marked.min.js"></script>
+  <script src="vendor/highlight.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/post.js"></script>
+</body>
+</html>
