@@ -69,5 +69,16 @@
     ],
     "excerpt": "안녕하세요 블로그 페이지 만들기 TEST 중 입니다.안녕하세요 블로그 페이지 만들기 TEST 중 입니다.안녕하세요 블로그 페이지 만들기 TEST 중 입니다.안녕하...",
     "passwordHash": "1155b0007068f8e930964e11ee161fe2958854fa8c82746890802b8ec38c9e67"
+  },
+  {
+    "slug": "post-20260711-014438",
+    "file": "post-20260711-014438.md",
+    "title": "TEST완료",
+    "date": "2026-07-11",
+    "tags": [
+      "AI이슈"
+    ],
+    "excerpt": "TEST완료TEST완료TEST완료TEST완료",
+    "passwordHash": "1155b0007068f8e930964e11ee161fe2958854fa8c82746890802b8ec38c9e67"
   }
 ]
