@@ -38,5 +38,13 @@
     "date": "2026-07-11",
     "tags": ["claude-code", "바이브코딩", "AI동향"],
     "excerpt": "Claude Sonnet 5 기본 모델 전환, 계층형 서브에이전트, Claude Cowork 모바일 확장 등 이번 주 클로드 AI 코딩 동향 정리."
+  },
+  {
+    "slug": "stock-market-log-2026-07-11",
+    "file": "stock-market-log-2026-07-11.md",
+    "title": "[국내외 증시 브리핑] 2026-07-11",
+    "date": "2026-07-11",
+    "tags": ["주식", "국내증시", "미국증시"],
+    "excerpt": "SK하이닉스 뉴욕 역대급 IPO, 메타 자체 AI칩 소식에 미국·국내 증시 동반 급등. 오늘의 관심 종목 TOP 5 정리."
   }
 ]
