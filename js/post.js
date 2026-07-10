@@ -20,7 +20,7 @@ async function init() {
     return;
   }
 
-  const manifestRes = await fetch("posts/manifest.json");
+  const manifestRes = await fetch("posts/manifest.json", { cache: "no-store" });
   const posts = await manifestRes.json();
   const entry = posts.find((post) => post.slug === slug);
 

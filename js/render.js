@@ -37,7 +37,7 @@ function parseFrontMatter(raw) {
 
 /** Fetches `posts/<file>`, returns { meta, html }. */
 async function loadPost(file) {
-  const res = await fetch(`posts/${file}`);
+  const res = await fetch(`posts/${file}`, { cache: "no-store" });
   if (!res.ok) {
     throw new Error(`Could not load posts/${file} (${res.status})`);
   }

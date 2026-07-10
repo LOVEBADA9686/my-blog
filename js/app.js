@@ -80,7 +80,7 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("posts/manifest.json");
+  const res = await fetch("posts/manifest.json", { cache: "no-store" });
   state.posts = await res.json();
 
   document.getElementById("search-input").addEventListener("input", (e) => {
