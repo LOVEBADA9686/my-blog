@@ -1,7 +1,7 @@
 ---
 title: 오늘 배운 것
 date: 2026-07-10
-tags: [claude-code, html, css, javascript, 웹개발]
+tags: [블로그홈페이지개발]
 excerpt: 클로드 코드로 블로그를 만들면서 다시 정리해본 HTML, CSS, JavaScript 각각의 역할.
 ---
 

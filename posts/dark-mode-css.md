@@ -1,7 +1,7 @@
 ---
 title: CSS 변수로 다크 모드 구현하기
 date: 2026-07-08
-tags: [css, 웹개발]
+tags: [블로그홈페이지개발]
 excerpt: prefers-color-scheme와 CSS 커스텀 프로퍼티만으로 깔끔한 다크 모드를 만드는 방법.
 ---
 

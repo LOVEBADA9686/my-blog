@@ -12,7 +12,7 @@
     "file": "vanilla-js-tips.md",
     "title": "바닐라 JS로 블로그 만들 때 알아두면 좋은 것들",
     "date": "2026-07-05",
-    "tags": ["javascript", "웹개발"],
+    "tags": ["블로그홈페이지개발"],
     "excerpt": "빌드 도구 없이 fetch와 템플릿 리터럴만으로 충분히 쓸만한 사이트를 만들 수 있어요."
   },
   {
@@ -20,7 +20,7 @@
     "file": "dark-mode-css.md",
     "title": "CSS 변수로 다크 모드 구현하기",
     "date": "2026-07-08",
-    "tags": ["css", "웹개발"],
+    "tags": ["블로그홈페이지개발"],
     "excerpt": "prefers-color-scheme와 CSS 커스텀 프로퍼티만으로 깔끔한 다크 모드를 만드는 방법."
   },
   {
@@ -28,7 +28,7 @@
     "file": "claude-code-html-css-js.md",
     "title": "오늘 배운 것",
     "date": "2026-07-10",
-    "tags": ["claude-code", "html", "css", "javascript", "웹개발"],
+    "tags": ["블로그홈페이지개발"],
     "excerpt": "클로드 코드로 블로그를 만들면서 다시 정리해본 HTML, CSS, JavaScript 각각의 역할."
   },
   {
@@ -36,7 +36,7 @@
     "file": "vibe-coding-log-2026-07-11.md",
     "title": "[바이브코딩 동향] 2026-07-11",
     "date": "2026-07-11",
-    "tags": ["claude-code", "바이브코딩", "AI동향"],
+    "tags": ["AI이슈"],
     "excerpt": "Claude Sonnet 5 기본 모델 전환, 계층형 서브에이전트, Claude Cowork 모바일 확장 등 이번 주 클로드 AI 코딩 동향 정리."
   },
   {
@@ -44,7 +44,7 @@
     "file": "stock-market-log-2026-07-11.md",
     "title": "[국내외 증시 브리핑] 2026-07-11",
     "date": "2026-07-11",
-    "tags": ["주식", "국내증시", "미국증시"],
+    "tags": ["국내/해외증시"],
     "excerpt": "SK하이닉스 뉴욕 역대급 IPO, 메타 자체 AI칩 소식에 미국·국내 증시 동반 급등. 오늘의 관심 종목 TOP 5 정리."
   }
 ]

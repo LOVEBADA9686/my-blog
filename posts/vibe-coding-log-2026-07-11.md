@@ -1,7 +1,7 @@
 ---
 title: "[바이브코딩 동향] 2026-07-11"
 date: 2026-07-11
-tags: [claude-code, 바이브코딩, AI동향]
+tags: [AI이슈]
 excerpt: Claude Sonnet 5 기본 모델 전환, 계층형 서브에이전트, Claude Cowork 모바일 확장 등 이번 주 클로드 AI 코딩 동향 정리.
 ---
 
