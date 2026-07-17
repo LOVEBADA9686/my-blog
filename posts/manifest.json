@@ -102,5 +102,15 @@
     ],
     "excerpt": "ㅎㅎㅎ",
     "passwordHash": "1155b0007068f8e930964e11ee161fe2958854fa8c82746890802b8ec38c9e67"
+  },
+  {
+    "slug": "vibe-coding-log-2026-07-17",
+    "file": "vibe-coding-log-2026-07-17.md",
+    "title": "[바이브코딩 동향] 2026-07-17",
+    "date": "2026-07-17",
+    "tags": [
+      "AI이슈"
+    ],
+    "excerpt": "Claude Cowork 클라우드 전환과 Claude for Teachers 출시, 그리고 바이브코딩의 \"신뢰 역설\" 통계까지 이번 주 클로드 AI·바이브코딩 소식 정리."
   }
 ]
