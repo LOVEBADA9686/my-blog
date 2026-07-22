@@ -302,5 +302,15 @@
       "국내/해외증시"
     ],
     "excerpt": "중국 문샷AI 'Kimi K3' 충격에 코스피·코스닥 이틀 연속 사이드카, 삼성전자·SK하이닉스 4%대 급락. 미국은 애플 하락·AMD 급등 속 혼조 마감."
+  },
+  {
+    "slug": "vibe-coding-log-2026-07-22",
+    "file": "vibe-coding-log-2026-07-22.md",
+    "title": "[바이브코딩 동향] 2026-07-22",
+    "date": "2026-07-22",
+    "tags": [
+      "AI이슈"
+    ],
+    "excerpt": "Claude Code의 메모리 누수·심볼릭 링크 버그 수정과 신규 샌드박스 옵션, 오늘부로 바뀌는 Claude API 메모리 스토어 베타 헤더, 그리고 어제 조용히 은퇴한 Claude Mythos Preview까지 정리."
   }
 ]
