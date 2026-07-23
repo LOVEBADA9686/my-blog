@@ -322,5 +322,15 @@
       "국내/해외증시"
     ],
     "excerpt": "메모리 반도체 랠리에 마이크론·웨스턴디지털 12%대 급등, 국내 증시도 반도체 수출 훈풍에 코스피 3.56% 반등. 오늘 밤 알파벳·테슬라 실적 발표를 앞두고 있다."
+  },
+  {
+    "slug": "vibe-coding-log-2026-07-23",
+    "file": "vibe-coding-log-2026-07-23.md",
+    "title": "[바이브코딩 동향] 2026-07-23",
+    "date": "2026-07-23",
+    "tags": [
+      "AI이슈"
+    ],
+    "excerpt": "Claude에서 바로 물어볼 수 있게 된 Anthropic Economic Index 커넥터, 2억 달러 규모 Economic Futures Research Fund 연구 아젠다 공개, 그리고 내일이면 완전히 사라지는 Opus 4.7 Fast Mode까지 정리."
   }
 ]
