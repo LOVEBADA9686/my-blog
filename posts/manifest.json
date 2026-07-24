@@ -342,5 +342,15 @@
       "국내/해외증시"
     ],
     "excerpt": "알파벳·테슬라 실적 서프라이즈에도 capex 부담·수익성 쇼크로 시간외 하락. 국내는 반도체 대장주 강세 속 코스피 6797선 상승 마감, 슈퍼마이크로컴퓨터 마진 서프라이즈도 눈길."
+  },
+  {
+    "slug": "vibe-coding-log-2026-07-24",
+    "file": "vibe-coding-log-2026-07-24.md",
+    "title": "[바이브코딩 동향] 2026-07-24",
+    "date": "2026-07-24",
+    "tags": [
+      "AI이슈"
+    ],
+    "excerpt": "Claude 음성 모드가 드디어 Opus·Sonnet 모델을 지원하고, Opus 5 출시설이 하루 넘게 이어지는 가운데 Claude Developer Platform의 Managed Agents 업데이트까지 정리했다."
   }
 ]
